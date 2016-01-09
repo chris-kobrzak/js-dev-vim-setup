@@ -1,0 +1,27 @@
+{
+  "name": "",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app/app.jsx",
+  "scripts": {
+    "browse": "open http://localhost:8080 ",
+    "bundle": "webpack ",
+    "clean": "rm -fr dist/ ",
+    "prebundle": "npm run clean ",
+    "serve": "http-server ",
+    "start:dev": "webpack-dev-server "
+  },
+  "dependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.0",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.0",
+    "babel-preset-react": "^6.3.0",
+    "webpack": "^1.12.0"
+  },
+  "author": "Chris Kobrzak",
+  "license": "ISC"
+}

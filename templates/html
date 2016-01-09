@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <title>Page title</title>
+    <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+  </head>
+  <body>
+
+    <script type="text/javascript" src="scripts/script.js"></script>
+  </body>
+</html>

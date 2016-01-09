@@ -1,0 +1,27 @@
+[submodule "bundle/vim-jsx.vim"]
+	path = bundle/vim-jsx.vim
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "bundle/dockerfile.vim"]
+	path = bundle/dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule "bundle/emmet.vim"]
+	path = bundle/emmet.vim
+	url = https://github.com/mattn/emmet-vim.git
+[submodule "bundle/jshint2.vim"]
+	path = bundle/jshint2.vim
+	url = https://github.com/Shutnik/jshint2.vim.git
+[submodule "bundle/nerdtree.vim"]
+	path = bundle/nerdtree.vim
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/vim-better-whitespace.vim"]
+	path = bundle/vim-better-whitespace.vim
+	url = https://github.com/ntpeters/vim-better-whitespace.git
+[submodule "bundle/vim-colors-solarized.vim"]
+	path = bundle/vim-colors-solarized.vim
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-markdown.vim"]
+	path = bundle/vim-markdown.vim
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "bundle/vim-multiple-cursors.vim"]
+	path = bundle/vim-multiple-cursors.vim
+	url = https://github.com/terryma/vim-multiple-cursors.git
