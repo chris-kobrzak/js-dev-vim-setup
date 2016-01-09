@@ -19,6 +19,12 @@ git submodule init
 git submodule update
 ```
 
+If you are on Ubuntu, you might need to install the `vim` package itself:
+
+```
+sudo apt-get install vim
+```
+
 ## Adding more plugins example
 
 ```git submodule add https://github.com/mxw/vim-jsx.git bundle/vim-jsx.vim```
