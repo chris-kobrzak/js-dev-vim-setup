@@ -1,4 +1,4 @@
-import React, { PropTypes } from "react"
+import React, { PropTypes } from 'react'
 
 /*
 const ThisClass = ( props ) => (
@@ -7,11 +7,11 @@ const ThisClass = ( props ) => (
 // or:
 */
 
-export default class extends React.Component {
+export default class ThisClass extends React.Component {
 
   constructor(props) {
     super(props)
-    //this.bindInstanceMethods( "methodName1", "methodName2" )
+    //this.bindInstanceMethods( 'methodName1', 'methodName2' )
 
     //this.state = {}
   }
