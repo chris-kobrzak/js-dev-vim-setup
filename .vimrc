@@ -15,6 +15,14 @@ set background=dark
 set colorcolumn=80
 colorscheme solarized
 
+set laststatus=2
+" let g:airline_powerline_fonts = 1
+let g:airline_theme = 'murmur'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+" let g:airline_section_x = airline#section#create_right(['tagbar'])
+let g:airline_section_y = ''
+
 " filetype plugin indent on
 
 " Strip trailing white space from JS files on save
