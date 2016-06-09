@@ -25,6 +25,9 @@ let g:airline_section_y = ''
 
 " filetype plugin indent on
 
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+
 " Strip trailing white space from JS files on save
 autocmd FileType javascript,css,scss autocmd BufWritePre <buffer> StripWhitespace
 
