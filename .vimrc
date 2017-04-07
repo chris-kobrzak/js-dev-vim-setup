@@ -27,6 +27,7 @@ let g:airline_section_y = ''
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|dist\|coverage'
 
 " Strip trailing white space from JS files on save
 autocmd FileType javascript,css,scss autocmd BufWritePre <buffer> StripWhitespace
