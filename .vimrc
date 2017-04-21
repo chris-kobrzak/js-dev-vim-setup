@@ -2,6 +2,8 @@ execute pathogen#infect()
 
 syntax on
 
+:imap jj <Esc>
+
 set whichwrap+=>,l,<,h
 set directory=$HOME/.vim/swapfiles//
 " set ruler
