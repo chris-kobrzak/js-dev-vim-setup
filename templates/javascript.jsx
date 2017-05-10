@@ -1,16 +1,19 @@
-import React, { PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 /*
-const ThisClass = (props) => (
-  <ThisClass key={props.foo} />
+const ThisClass = ({prop1, prop2}) => (
+  <div key={prop1}>{ prop2 }</div>
 )
 // or:
 */
 
-export default class ThisClass extends React.Component {
+export default class ThisClass extends Component {
+  // componentWillMount () { } // Only for server-side rendering
 
   constructor (props) {
     super(props)
+
     this.bindInstanceMethods('methodName1', 'methodName2')
 
     // this.state = {}
@@ -20,14 +23,18 @@ export default class ThisClass extends React.Component {
     methods.forEach((method) => { this[method] = this[method].bind(this) })
   }
 
-  // https://facebook.github.io/react/docs/component-specs.html
-  componentWillMount () { }
-  componentDidMount () { }
-  componentWillReceiveProps (nextProps) { }
-  shouldComponentUpdate (nextProps, nextState) { return false }
-  componentWillUpdate (nextProps, nextState) { }
-  componentDidUpdate (prevProps, prevState) { }
-  componentWillUnmount () { }
+  componentDidMount () {
+  }
+
+  componentWillReceiveProps (nextProps) {
+  }
+
+  shouldComponentUpdate (nextProps, nextState) {
+    return false
+  }
+
+  componentWillUpdate (nextProps, nextState) {
+  }
 
   // Consider hitting m-r in Vim to set bookmark
   render () {
@@ -36,6 +43,12 @@ export default class ThisClass extends React.Component {
       </div>
     )
   }
+
+  componentDidUpdate (prevProps, prevState) {
+  }
+
+  componentWillUnmount () {
+  }
 }
 
 ThisClass.propTypes = {
@@ -43,6 +56,7 @@ ThisClass.propTypes = {
   initialValue: PropTypes.number,
   type: PropTypes.oneOf(['enum1', 'enum2'])
 }
+
 ThisClass.defaultProps = {
   initialValue: 0
 }
