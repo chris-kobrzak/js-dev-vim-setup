@@ -40,3 +40,6 @@
 [submodule "bundle/vim-graphql.vim"]
 	path = bundle/vim-graphql.vim
 	url = https://github.com/jparise/vim-graphql.git
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
