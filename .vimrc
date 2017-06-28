@@ -39,7 +39,7 @@ autocmd BufNewFile .babelrc :silent! exec ":0r ".$HOME."/.vim/templates/.babelrc
 autocmd BufNewFile package.json :silent! exec ":0r ".$HOME."/.vim/templates/package.json"
 autocmd BufNewFile webpack.config.js :silent! exec ":0r ".$HOME."/.vim/templates/webpack.config.js"
 
-autocmd BufNewFile,BufRead *.ejs set filetype=html
+autocmd BufNewFile,BufRead *.ejs,*.hbs set filetype=html
 autocmd BufNewFile,BufRead *.js.ejs set filetype=javascript
 autocmd BufNewFile,BufRead *.json.ejs set filetype=json
 autocmd BufNewFile,BufRead *.ts.ejs set filetype=typescript
