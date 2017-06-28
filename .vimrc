@@ -46,6 +46,7 @@ autocmd BufNewFile,BufRead *.ts.ejs set filetype=typescript
 
 " autocmd vimenter * NERDTree
 map <C-t> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 nnoremap <silent><f1> :jshint<cr>
 inoremap <silent><f1> <c-o>:jshint<cr>
