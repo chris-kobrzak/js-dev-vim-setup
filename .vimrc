@@ -32,7 +32,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|dist\|coverage'
 
 " Strip trailing white space from JS files on save
-autocmd FileType javascript,css,scss autocmd BufWritePre <buffer> StripWhitespace
+autocmd FileType javascript,typescript,css,scss autocmd BufWritePre <buffer> StripWhitespace
 
 autocmd BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 autocmd BufNewFile .babelrc :silent! exec ":0r ".$HOME."/.vim/templates/.babelrc"
