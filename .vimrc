@@ -32,19 +32,21 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|dist\|coverage'
 
 " Strip trailing white space from JS files on save
-autocmd FileType javascript,typescript,css,scss autocmd BufWritePre <buffer> StripWhitespace
+au FileType javascript,typescript,css,scss au BufWritePre <buffer> StripWhitespace
 
-autocmd BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
-autocmd BufNewFile .babelrc :silent! exec ":0r ".$HOME."/.vim/templates/.babelrc"
-autocmd BufNewFile package.json :silent! exec ":0r ".$HOME."/.vim/templates/package.json"
-autocmd BufNewFile webpack.config.js :silent! exec ":0r ".$HOME."/.vim/templates/webpack.config.js"
+au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
+au BufNewFile .babelrc :silent! exec ":0r ".$HOME."/.vim/templates/.babelrc"
+au BufNewFile package.json :silent! exec ":0r ".$HOME."/.vim/templates/package.json"
+au BufNewFile webpack.config.js :silent! exec ":0r ".$HOME."/.vim/templates/webpack.config.js"
 
-autocmd BufNewFile,BufRead *.ejs,*.hbs set filetype=html
-autocmd BufNewFile,BufRead *.js.ejs set filetype=javascript
-autocmd BufNewFile,BufRead *.json.ejs set filetype=json
-autocmd BufNewFile,BufRead *.ts.ejs set filetype=typescript
+au BufNewFile,BufRead *.ejs,*.hbs set filetype=html
+au BufNewFile,BufRead *.js.ejs set filetype=javascript
+au BufNewFile,BufRead *.json.ejs set filetype=json
+au BufNewFile,BufRead *.ts.ejs set filetype=typescript
 
-" autocmd vimenter * NERDTree
+au BufNewFile,BufRead *.nginx,nginx.conf set ft=nginx
+
+" au vimenter * NERDTree
 map <C-t> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
