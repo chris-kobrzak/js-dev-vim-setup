@@ -31,20 +31,20 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|dist\|coverage'
 
-" Strip trailing white space from JS files on save
-au FileType javascript,typescript,css,scss au BufWritePre <buffer> StripWhitespace
-
-au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
-au BufNewFile .babelrc :silent! exec ":0r ".$HOME."/.vim/templates/.babelrc"
-au BufNewFile package.json :silent! exec ":0r ".$HOME."/.vim/templates/package.json"
-au BufNewFile webpack.config.js :silent! exec ":0r ".$HOME."/.vim/templates/webpack.config.js"
-
 au BufNewFile,BufRead *.ejs,*.hbs set filetype=html
 au BufNewFile,BufRead *.js.ejs set filetype=javascript
 au BufNewFile,BufRead *.json.ejs set filetype=json
 au BufNewFile,BufRead *.ts.ejs set filetype=typescript
 
 au BufNewFile,BufRead *.nginx,nginx.conf set ft=nginx
+
+au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
+au BufNewFile .babelrc :silent! exec ":0r ".$HOME."/.vim/templates/.babelrc"
+au BufNewFile package.json :silent! exec ":0r ".$HOME."/.vim/templates/package.json"
+au BufNewFile webpack.config.js :silent! exec ":0r ".$HOME."/.vim/templates/webpack.config.js"
+
+" Strip trailing white space on save
+au FileType javascript,typescript,css,scss au BufWritePre <buffer> StripWhitespace
 
 " au vimenter * NERDTree
 map <C-t> :NERDTreeToggle<CR>
