@@ -44,7 +44,7 @@ au BufNewFile package.json :silent! exec ":0r ".$HOME."/.vim/templates/package.j
 au BufNewFile webpack.config.js :silent! exec ":0r ".$HOME."/.vim/templates/webpack.config.js"
 
 " Strip trailing white space on save
-au FileType javascript,typescript,css,scss au BufWritePre <buffer> StripWhitespace
+au FileType javascript,typescript,css,scss,sql,html au BufWritePre <buffer> StripWhitespace
 
 " au vimenter * NERDTree
 map <C-t> :NERDTreeToggle<CR>
