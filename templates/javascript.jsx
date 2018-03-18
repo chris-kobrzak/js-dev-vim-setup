@@ -23,9 +23,6 @@ export default class ThisClass extends Component {
     methods.forEach((method) => { this[method] = this[method].bind(this) })
   }
 
-  componentDidMount () {
-  }
-
   componentWillReceiveProps (nextProps) {
   }
 
@@ -42,6 +39,9 @@ export default class ThisClass extends Component {
       <div>
       </div>
     )
+  }
+
+  componentDidMount () {
   }
 
   componentDidUpdate (prevProps, prevState) {
