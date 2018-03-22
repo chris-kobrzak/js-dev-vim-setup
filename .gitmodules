@@ -16,9 +16,6 @@
 [submodule "bundle/emmet.vim"]
 	path = bundle/emmet.vim
 	url = https://github.com/mattn/emmet-vim.git
-[submodule "bundle/jshint2.vim"]
-	path = bundle/jshint2.vim
-	url = https://github.com/Shutnik/jshint2.vim.git
 [submodule "bundle/nerdtree.vim"]
 	path = bundle/nerdtree.vim
 	url = https://github.com/scrooloose/nerdtree.git
@@ -43,3 +40,6 @@
 [submodule "bundle/typescript-vim"]
 	path = bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "bundle/vim-prettier.vim"]
+	path = bundle/vim-prettier.vim
+	url = https://github.com/prettier/vim-prettier.git

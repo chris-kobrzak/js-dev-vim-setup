@@ -31,6 +31,12 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|dist\|coverage'
 
+" Prettier code formatter
+let g:prettier#config#semi = 'false'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#arrow_parens = 'avoid'
+let g:prettier#config#trailing_comma = 'none'
+
 au BufNewFile,BufRead *.ejs,*.hbs set filetype=html
 au BufNewFile,BufRead *.js.ejs set filetype=javascript
 au BufNewFile,BufRead *.json.ejs set filetype=json
@@ -40,6 +46,7 @@ au BufNewFile,BufRead *.nginx,nginx.conf set ft=nginx
 
 au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 au BufNewFile .babelrc :silent! exec ":0r ".$HOME."/.vim/templates/.babelrc"
+au BufNewFile .prettierrc :silent! exec ":0r ".$HOME."/.vim/templates/.prettierrc"
 au BufNewFile package.json :silent! exec ":0r ".$HOME."/.vim/templates/package.json"
 au BufNewFile webpack.config.js :silent! exec ":0r ".$HOME."/.vim/templates/webpack.config.js"
 
@@ -49,10 +56,6 @@ au FileType javascript,typescript,css,scss,sql,html au BufWritePre <buffer> Stri
 " au vimenter * NERDTree
 map <C-t> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-
-nnoremap <silent><f1> :jshint<cr>
-inoremap <silent><f1> <c-o>:jshint<cr>
-vnoremap <silent><F1> :JSHint<CR>
 
 " Toggle line number management
 function! NumberToggle()
