@@ -4,12 +4,14 @@ syntax on
 
 :imap jj <Esc>
 
+set visualbell
 set whichwrap+=>,l,<,h
 set directory=$HOME/.vim/swapfiles//
 " set ruler
 " set number
 " set nu!
 " set smartindent
+set confirm
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -18,6 +20,7 @@ set colorcolumn=80
 colorscheme solarized
 
 set laststatus=2
+
 " let g:airline_powerline_fonts = 1
 let g:airline_theme = 'murmur'
 let g:airline_left_sep = '▶'
@@ -42,7 +45,7 @@ au BufNewFile,BufRead *.js.ejs set filetype=javascript
 au BufNewFile,BufRead *.json.ejs set filetype=json
 au BufNewFile,BufRead *.ts.ejs set filetype=typescript
 
-au BufNewFile,BufRead *.nginx,nginx.conf set ft=nginx
+au BufNewFile,BufRead *.nginx,nginx.conf set filetype=nginx
 
 au BufNewFile * :silent! exec ":0r ".$HOME."/.vim/templates/".&ft
 au BufNewFile .babelrc :silent! exec ":0r ".$HOME."/.vim/templates/.babelrc"
@@ -52,6 +55,11 @@ au BufNewFile webpack.config.js :silent! exec ":0r ".$HOME."/.vim/templates/webp
 
 " Strip trailing white space on save
 au FileType javascript,typescript,css,scss,sql,html au BufWritePre <buffer> StripWhitespace
+
+" Highlight search results
+set hlsearch
+" Map escape to turn off search highlighting
+nnoremap <silent> <leader>/ :nohlsearch <CR>
 
 " au vimenter * NERDTree
 map <C-t> :NERDTreeToggle<CR>
