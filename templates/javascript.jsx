@@ -9,8 +9,6 @@ const ThisClass = ({prop1, prop2}) => (
 */
 
 export default class ThisClass extends Component {
-  // componentWillMount () { } // Only for server-side rendering
-
   constructor (props) {
     super(props)
 
@@ -23,6 +21,50 @@ export default class ThisClass extends Component {
     methods.forEach((method) => { this[method] = this[method].bind(this) })
   }
 
+  static getDerivedStateFromProps (nextProps, prevState) {
+  }
+
+  shouldComponentUpdate (nextProps, nextState) {
+    return false
+  }
+
+  // Consider hitting m-r in Vim to set bookmark
+  render () {
+    return (
+      <div>
+      </div>
+    )
+  }
+
+  getSnapshotBeforeUpdate (prevProps, prevState) {
+  }
+
+  componentDidMount () {
+  }
+
+  componentDidUpdate (prevProps, prevState) {
+  }
+
+  componentWillUnmount () {
+  }
+}
+
+/* Legacy class components
+export default class ThisClass extends Component {
+  constructor (props) {
+    super(props)
+
+    this.bindInstanceMethods('methodName1', 'methodName2')
+
+    // this.state = {}
+  }
+
+  bindInstanceMethods (...methods) {
+    methods.forEach((method) => { this[method] = this[method].bind(this) })
+  }
+
+  // componentWillMount () { } // Only for server-side rendering
+
   componentWillReceiveProps (nextProps) {
   }
 
@@ -33,7 +75,6 @@ export default class ThisClass extends Component {
   componentWillUpdate (nextProps, nextState) {
   }
 
-  // Consider hitting m-r in Vim to set bookmark
   render () {
     return (
       <div>
@@ -50,6 +91,7 @@ export default class ThisClass extends Component {
   componentWillUnmount () {
   }
 }
+*/
 
 ThisClass.propTypes = {
   string: PropTypes.string.isRequired,
