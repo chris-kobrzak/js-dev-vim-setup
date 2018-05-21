@@ -57,7 +57,7 @@ au BufNewFile package.json :silent! exec ":0r ".$HOME."/.vim/templates/package.j
 au BufNewFile webpack.config.js :silent! exec ":0r ".$HOME."/.vim/templates/webpack.config.js"
 
 " Strip trailing white space on save
-au FileType javascript,typescript,css,scss,sql,html au BufWritePre <buffer> StripWhitespace
+au FileType javascript,typescript,css,scss,sql,html,markdown au BufWritePre <buffer> StripWhitespace
 
 " Highlight search results
 set hlsearch
@@ -77,7 +77,7 @@ function! NumberToggle()
   endif
 endfunc
 
-nnoremap <C-l> :call NumberToggle()<cr>
+nnoremap <C-l> :call NumberToggle()<CR>
 
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
