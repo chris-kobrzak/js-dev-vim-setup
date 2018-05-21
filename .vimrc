@@ -12,6 +12,7 @@ set directory=$HOME/.vim/swapfiles//
 " set nu!
 " set smartindent
 set confirm
+set so=7
 set tabstop=2
 set shiftwidth=2
 set expandtab
