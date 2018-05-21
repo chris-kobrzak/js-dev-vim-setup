@@ -16,10 +16,13 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set background=dark
-set colorcolumn=80
+set colorcolumn=+1
 colorscheme solarized
 
 set laststatus=2
+
+set textwidth=90
+au FileType gitcommit set textwidth=72
 
 " let g:airline_powerline_fonts = 1
 let g:airline_theme = 'murmur'
