@@ -28,3 +28,7 @@ sudo apt-get install vim
 ## Adding more plugins example
 
 ```git submodule add https://github.com/mxw/vim-jsx.git bundle/vim-jsx.vim```
+
+## Getting plugins up-to-date
+
+```git submodule update --recursive --remote```
