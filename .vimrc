@@ -70,15 +70,20 @@ map <C-t> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " Toggle line number management
-function! NumberToggle()
-  if(&relativenumber == 1)
+function! LineNumberToggle()
+  if (&relativenumber == 0 && &number == 0)
+    set norelativenumber
     set number
-  else
+  elseif (&number == 1)
+    set nonumber
     set relativenumber
+  else
+    set norelativenumber
+    set nonumber
   endif
 endfunc
 
-nnoremap <C-l> :call NumberToggle()<CR>
+nnoremap <C-l> :call LineNumberToggle()<CR>
 
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
