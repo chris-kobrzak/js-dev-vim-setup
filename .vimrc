@@ -67,7 +67,10 @@ nnoremap <silent> <leader>/ :nohlsearch <CR>
 
 " au vimenter * NERDTree
 map <C-t> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeShowHidden = 1
+let NERDTreeWinSize = 50
 
 " Toggle line number management
 function! LineNumberToggle()
