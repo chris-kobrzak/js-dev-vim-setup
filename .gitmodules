@@ -43,3 +43,6 @@
 [submodule "bundle/vim-prettier.vim"]
 	path = bundle/vim-prettier.vim
 	url = https://github.com/prettier/vim-prettier.git
+[submodule "bundle/vim-case-convert.vim"]
+	path = bundle/vim-case-convert.vim
+	url = https://github.com/chiedo/vim-case-convert.git
