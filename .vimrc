@@ -60,6 +60,7 @@ au FileType javascript,typescript,css,scss,sql,html,markdown au BufWritePre <buf
 
 :imap jj <Esc>
 nnoremap <silent> vv <C-w>v
+xnoremap y "*y
 
 " Highlight search results
 set hlsearch
