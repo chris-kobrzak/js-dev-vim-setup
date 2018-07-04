@@ -2,8 +2,6 @@ execute pathogen#infect()
 
 syntax on
 
-:imap jj <Esc>
-
 set visualbell
 set whichwrap+=>,l,<,h
 set directory=$HOME/.vim/swapfiles//
@@ -59,6 +57,9 @@ au BufNewFile webpack.config.js :silent! exec ":0r ".$HOME."/.vim/templates/webp
 
 " Strip trailing white space on save
 au FileType javascript,typescript,css,scss,sql,html,markdown au BufWritePre <buffer> StripWhitespace
+
+:imap jj <Esc>
+nnoremap <silent> vv <C-w>v
 
 " Highlight search results
 set hlsearch
