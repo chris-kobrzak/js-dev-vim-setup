@@ -1,4 +1,4 @@
-execute pathogen#infect()
+call pathogen#infect()
 
 syntax on
 
@@ -21,6 +21,10 @@ colorscheme solarized
 set laststatus=2
 
 set textwidth=90
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 au FileType gitcommit set textwidth=72
 
 " let g:airline_powerline_fonts = 1
