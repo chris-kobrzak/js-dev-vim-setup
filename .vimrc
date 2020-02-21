@@ -58,6 +58,10 @@ au BufNewFile webpack.config.js :silent! exec ":0r ".$HOME."/.vim/templates/webp
 " Strip trailing white space on save
 au FileType javascript,typescript,css,scss,sql,html,markdown au BufWritePre <buffer> StripWhitespace
 
+au FileType javascript setlocal formatprg=prettier
+" au FileType javascript.jsx setlocal formatprg=prettier
+au FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+
 :imap jj <Esc>
 nnoremap <silent> vv <C-w>v
 xnoremap y "*y
