@@ -1,4 +1,4 @@
-execute pathogen#infect()
+call pathogen#infect()
 
 syntax on
 
@@ -30,8 +30,6 @@ let g:airline_right_sep = '◀'
 " let g:airline_section_x = airline#section#create_right(['tagbar'])
 let g:airline_section_y = ''
 
-" filetype plugin indent on
-
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|dist\|coverage'
@@ -57,6 +55,10 @@ au BufNewFile webpack.config.js :silent! exec ":0r ".$HOME."/.vim/templates/webp
 
 " Strip trailing white space on save
 au FileType javascript,typescript,css,scss,sql,html,markdown au BufWritePre <buffer> StripWhitespace
+
+" filetype plugin indent on
+" filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 :imap jj <Esc>
 nnoremap <silent> vv <C-w>v
