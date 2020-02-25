@@ -46,3 +46,6 @@
 [submodule "bundle/vim-case-convert"]
 	path = bundle/vim-case-convert
 	url = https://github.com/chiedo/vim-case-convert.git
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion
