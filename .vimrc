@@ -40,6 +40,8 @@ let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#arrow_parens = 'avoid'
 let g:prettier#config#trailing_comma = 'none'
 
+au BufNewFile,BufRead *.jsx set filetype=javascript
+au BufNewFile,BufRead *.tsx set filetype=typescript
 au BufNewFile,BufRead *.ejs,*.hbs set filetype=html
 au BufNewFile,BufRead *.js.ejs set filetype=javascript
 au BufNewFile,BufRead *.json.ejs set filetype=json
@@ -95,6 +97,21 @@ nnoremap <C-l> :call LineNumberToggle()<CR>
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
 " End: line number management
+
+" Follow file paths without extensions
+augroup suffixes
+  autocmd!
+
+  let fileTypeToExtensions = {
+    \'javascript': '.js,.jsx,.json',
+    \'typescript': '.ts,.tsx'
+  \}
+
+  for [fileType, extensions] in items(fileTypeToExtensions)
+    execute 'autocmd FileType ' . fileType . ' setlocal suffixesadd=' . extensions
+    unlet fileType extensions
+  endfor
+augroup END
 
 " Display buffer list in the alphabetical order
 command! -bang Ls redir @" | silent ls<bang> | redir END | echo " " |

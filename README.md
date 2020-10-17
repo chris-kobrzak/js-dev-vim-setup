@@ -32,6 +32,8 @@ cursors)
 
 **Ctrl-l** - toggle line numbers (including relative to the current line)
 
+**gf** - follow local `import` paths even if they don't have e.g. the `.js` extension
+
 **:Ls** - show file buffer list ordered alphabetically
 
 # Working with plugins
