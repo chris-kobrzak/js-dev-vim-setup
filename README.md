@@ -25,6 +25,8 @@ git submodule update
 
 **Ctrl-t** - show file system explorer
 
+**Ctrl-j** - pretty format a JSON string
+
 **Ctrl-p** - free text file name search
 
 **Ctrl-n** - select multiple instances of a selected word (like SublimeText multiple

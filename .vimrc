@@ -66,6 +66,9 @@ set omnifunc=syntaxcomplete#Complete
 nnoremap <silent> vv <C-w>v
 xnoremap y "*y
 
+" Format as JSON
+nnoremap <C-j> :%!jq .<CR>
+
 " Highlight search results
 set hlsearch
 " Map escape to turn off search highlighting
