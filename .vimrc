@@ -16,6 +16,7 @@ set directory=$HOME/.vim/swapfiles//
 " set smartindent
 " Prompt to save unsaved changes instead of refusing to quit
 set confirm
+set spell
 " Keep at least 7 lines visible above and below the cursor (scrolloff)
 set so=7
 set tabstop=2
