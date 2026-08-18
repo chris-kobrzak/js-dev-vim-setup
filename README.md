@@ -1,3 +1,5 @@
+
+
 JavaScript development Vim set-up
 =================================
 
@@ -46,4 +48,4 @@ cursors)
 
 ## Adding more plugins example
 
-```git submodule add https://github.com/mxw/vim-jsx.git bundle/vim-jsx.vim```
+```git submodule add https://github.com/mxw/vim-jsx.git bundle/vim-jsx```
